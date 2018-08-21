@@ -1,0 +1,465 @@
+/* Fonts */
+@font-face {
+    font-family: 'ProximaNova_reg';
+    src: url('../fonts/ProximaNovaCond-Regular.eot');
+    src: url('../fonts/ProximaNovaCond-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNovaCond-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNovaCond-Regular.woff') format('woff'),
+        url('../fonts/ProximaNovaCond-Regular.ttf') format('truetype'),
+        url('../fonts/ProximaNovaCond-Regular.svg#ProximaNovaCond-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova_Bold';
+    src: url('../fonts/ProximaNova-Bold.eot');
+    src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Bold.woff') format('woff'),
+        url('../fonts/ProximaNova-Bold.ttf') format('truetype'),
+        url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova_Semibold';
+    src: url('../fonts/ProximaNovaExCn-Semibold.eot');
+    src: url('../fonts/ProximaNovaExCn-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNovaExCn-Semibold.woff2') format('woff2'),
+        url('../fonts/ProximaNovaExCn-Semibold.woff') format('woff'),
+        url('../fonts/ProximaNovaExCn-Semibold.ttf') format('truetype'),
+        url('../fonts/ProximaNovaExCn-Semibold.svg#ProximaNovaExCn-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+.reg () {
+	font-family: 'ProximaNova_reg', sans-serif;
+}
+.bold () {
+	font-family: 'ProximaNova_Bold', sans-serif;
+}
+.semibold () {
+	font-family: 'ProximaNova_Semibold', sans-serif;
+}
+/*Colors*/
+@btn-colors:#fbb202;
+@icon-color:#46b814;
+@text:#1a1820;
+@danger:#ff0000;
+@bg-ligth:#f5f5f5;
+@ligth:#fff;
+
+/*Basic setting */
+html, body {
+	font-size: 10px;
+	.reg
+}
+button, input, a {
+	&:focus {
+		outline: none;
+	}
+}
+a:hover {
+	text-decoration: none;
+}
+/*Typography*/
+section {
+	padding: 10rem 0;
+}
+.section-header {
+	text-align: center;
+	font-size: 3.6rem;
+	.bold;
+	margin: 2rem 0 10rem;
+	&-light {
+		text-align: center;
+		color:@ligth;		
+
+	}
+	&-subtitle {
+		font-size: 1.5rem;
+		margin-top: 3rem;
+	}
+}
+
+/*Main*/
+.main {
+	padding: 3rem 0 5rem ;	
+	background: #fff url( ../img/main-bg.jpg ) center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	&-content {
+		margin-top: 14rem;
+		h1 {
+			.bold;
+			margin-top: 0;
+			font-size: 4rem;
+			text-transform: uppercase;
+		}
+	}
+	&-subtitle {
+		margin: 4rem 0;
+		font-size: 2.4rem;
+		.reg;
+
+	}
+	span {
+		padding: 3rem 5rem;
+		display:inline-block;
+		background-color: @icon-color;
+		color:@ligth;
+		font-size: 1.8rem;
+		text-align: center;
+		strong {
+			font-size: 3rem;
+			.bold
+		}
+	}
+	&-trigger {
+		display: block;
+		margin-top: 3rem;
+		font-size: 2.2rem;
+		text-transform: uppercase;
+		.bold
+
+	}
+	/*Оформление формы */ 
+	&-form {
+		.reg;
+		display: block;
+		padding:4rem 5rem;
+		background-color: @ligth;
+		text-align: center;
+		&-header {
+			font-size: 1.8rem;
+			margin-bottom: 2rem;
+			strong {
+				font-size: 1.9rem;
+			}
+		}
+	 &-input {
+		display: block;
+		width: 100%;
+		padding:1.5rem ;
+		border:1px solid #ddd;
+		border-radius: 5px;
+		margin: 2rem 0 ;
+		font-size: 1.8rem;
+	}	
+	label {
+		.bold;
+		font-size: 1.3rem;
+		background-color: @ligth;
+		padding: 0.5rem;
+		display: inline-block;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+	&-btn {
+		display: block;
+		.reg;
+		font-size: 1.8rem !important; 
+		width: 100%;
+		padding: 3rem;
+
+	}
+	}
+
+	/*Подпись под формой*/
+	small {
+		display: block;
+		font-size: 1.3rem;
+		margin-top: 1.3rem;
+	}
+}
+.phone-block {
+	text-align: right;
+}
+.phone-link {
+	color: @text;
+	.bold();
+	font-size: 2rem;
+	display: inline-block;
+	height: 7rem;
+	line-height: 7rem;
+	
+}
+.button {
+	.semibold();
+	font-size: 1.2rem;
+	padding:1rem 3rem;
+	border:none;
+	background-color: @btn-colors;
+	color:@ligth;
+	text-transform: uppercase;
+	border-radius: 8px;
+	transition: all 0.2s;
+	&:hover {
+		cursor: pointer;
+		background-color: lighten(@btn-colors, 10%);
+	} 
+	
+}
+.wrap {
+	display: table;
+	height: 7rem;
+	width: 100%;
+	&-block{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: right;
+	}
+	
+}
+
+/*Оформление секции преимущества*/
+.features {
+	text-align: center;
+	&-block{
+		text-align: center;
+		h3 {
+			font-size: 2rem;
+			.semibold;
+			margin-bottom: 3rem;
+		}
+		p {
+			font-size: 1.4rem;
+		}
+	}
+	&-img {
+		height: 8rem;
+		margin-bottom: 3rem;
+		img {
+		display: block;
+		margin: 0 auto;
+	}
+	}
+}
+.slick-active {
+	outline: none;
+}
+.prev {
+	position: absolute;
+	top:50%;
+	left: 0;
+	transform: scale(-50%);
+	z-index: 99;
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	background: url(../img/prevArrow.png) center no-repeat;
+	background-position: 100% ;	
+}
+.next {
+	position: absolute;
+	top:50%;
+	right: 0;
+	transform: scale(-50%);
+	z-index: 99;
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	background: url(../img/nextArrow.png) center no-repeat;
+	background-position: 100% ;	
+
+}
+.price {
+	background: url(../img/bg-prices.jpg) center repeat;
+	background-position: 100% ;
+	img {
+		display: inline-block;
+		width: 100%;
+		max-width: 30rem;
+
+	}
+	&-footer{
+		margin-top: 5rem;
+		text-align: center;
+	}
+	&-btn {
+		display: inline-block;
+		padding: 1.4rem 2rem; 
+		font-size: 2rem;
+	}
+	&-list {
+		padding:0;
+		list-style: none;
+		text-align: center;
+		min-height: 12rem;
+		font-size: 1.4rem;
+		margin-bottom: 2rem;
+
+		.reg;
+		li {
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 2rem;
+				height: 2rem;
+				background: url(../img/checked.png) center no-repeat;
+				background-position: 100% ;
+				vertical-align: middle;
+				margin-right: 0.5rem;
+			}
+		}
+	}
+	&-block {
+		padding: 3rem 1rem 4rem;
+		text-align: center;
+		background: @ligth;
+		min-height: 50rem;
+		h4 {
+			font-size: 2rem;
+			.bold;
+			margin-bottom: 2rem;
+		}
+		&-tag {
+			display: block;
+			font-size: 2rem;
+			.bold;
+			margin: 2rem 0;
+		}
+
+	}
+
+
+}
+// Оформление блока с отзывами 
+.feedback {
+	background: url(../img/feedback/feedback-bg.jpg) no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	&-description {
+		font-size: 1.4rem;
+	}
+	&-text {
+		margin-top: 2rem;
+		font-style: italic;
+		font-size: 1.4rem;
+		border: 1px solid @icon-color;
+		padding: 1rem;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 1.5rem;
+			height: 2rem;
+			top:-2rem;
+			left:4rem;
+			border: 2px solid @icon-color;
+			border-bottom: 2px solid @ligth;
+			border-top-right-radius: 100%;
+		}
+	}
+	&-btn {
+		position: absolute;
+		top:50%;
+		transform:translateY(-50%);
+		width: 4rem;
+		height: 5rem;
+		border: none;
+		background-color: @icon-color;
+		&_prev {
+			left:-4rem;
+
+		}
+		&_next {
+			right: -4rem;
+
+		}
+	}
+	&-slider {
+		background-color: @ligth;
+		box-shadow: 6px 10px 18px 0 rgba(0, 0, 0, 0.11);
+		padding: 4rem 5rem;
+		.media {
+			font-size: 1.6rem;
+			margin-top: 3rem;
+			h4 {
+				.bold;
+			}
+		}
+	}
+}
+
+
+// Оформление модальных окон
+.modal-window{
+	display: none;
+	position: fixed;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0 , 0 , 0 , 0.5);
+	&-dialog {
+
+	}
+	&-content {
+		position: fixed;
+		background-color: @ligth;
+		text-align: center;
+		top:10%;
+		left:50%;
+        transform:translateX(-50%);
+        padding:4rem 6rem;
+	}
+	&-form {
+		padding: 0;
+		margin-top: 3rem;
+	}
+	&-close {
+		position: absolute;
+		top:-1.5rem;
+		right: -2rem;
+		color:@ligth;
+		border:none;
+		width: 2rem;
+		font-size: 3rem;
+		background-color: transparent;
+
+	}
+	&-header {
+		margin-top: 0;
+		padding: 0;
+		h4 {
+			.bold
+		}
+		p {
+			font-size: 1.5rem;
+		}
+
+	}
+}
+
+@media (max-width: 991px) {
+	.main {
+		background-position: top right;
+	}
+	.phone-block {
+		text-align: center;
+	}
+	.main-title {
+		text-align: center;
+		padding-bottom: 2rem;
+	}
+	.main-content {
+		margin-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	.price-block {
+		margin-top: 2rem;
+	}
+}
+@media (max-width: 767px){
+	.main {
+		background-position:  left;
+	}
+}
+
