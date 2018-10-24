@@ -1,0 +1,714 @@
+// colors 
+@light: #fff;
+@button: #95c62c;
+@bg-about:#f8f8f0;
+@bg-form: #040000;
+@bg-border:#1ca4cc;
+@price:#b71919;
+
+// fonts 
+@font-face {
+	font-family: 'Helvetica bold';
+	src: url('../fonts/HelveticaLTStd-Bold.eot');
+	src: local('../fonts/Helvetica LT Std Bold'), local('HelveticaLTStd-Bold'),
+		url('../fonts/HelveticaLTStd-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/HelveticaLTStd-Bold.woff') format('woff'),
+		url('../fonts/HelveticaLTStd-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Helvetica LT Std';
+	src: url('../fonts/HelveticaLTStd-Light.eot');
+	src: local('../fonts/Helvetica LT Std Light'), local('HelveticaLTStd-Light'),
+		url('../fonts/HelveticaLTStd-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/HelveticaLTStd-Light.woff') format('woff'),
+		url('../fonts/HelveticaLTStd-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+.bold() {
+    font-family: 'Helvetica bold';
+}
+.reg (){
+	font-family: 'Helvetica LT Std';
+}
+
+
+html{
+	font-size: 10px;
+}
+body {
+	font-size: 1.7rem;
+}
+
+
+h1{
+	font-size: 3.9rem;
+	.bold;
+	color:@light;
+}
+
+h2 {
+	font-size: 3.5rem;
+	.bold;
+	margin: 0;
+	padding: 0;
+
+}
+h3 {
+	font-size: 2.2rem;
+}
+
+a {
+	text-decoration: none;
+}
+section {
+	padding:9rem 0 6rem;
+}
+.section-title{
+	margin-bottom: 5rem;
+	h2{
+		text-align: center;
+		.bold;
+	}
+	&_left {
+		h2{
+			text-align: left;
+		}
+		
+	}
+	&-icon{
+		text-align: center;
+		img {
+			display: inline-block;
+		}
+	}
+}
+
+.taleft{
+	text-align: left;
+	display: inline-block;
+}
+.line {
+	height: 5px;
+	width: 50px;
+	background-color: @bg-border;
+}
+.wrap {
+	display: table;
+	width: 100%;
+	height: 26rem;
+	padding-left: 12%;
+	&-button {
+		text-align: center;
+	}
+
+	&-block{
+		display: table-cell;
+		vertical-align: middle;
+		p{
+		
+		margin-left: 10%;
+		font-size: 1.7rem;
+		.bold;
+		}
+	}
+	&-title {
+		position: relative;
+		padding-left:10%;
+		img{
+			position: absolute;
+			left:0;
+			top:50%;
+			transform:translateY(-50%);
+		}
+		h4{
+			font-size: 2.2rem;
+			.bold;
+		}
+	}
+
+}
+.circle {
+	display:inline-block;
+	width: 5rem;
+	height: 5rem;
+	background-color: @bg-border;
+	border-radius: 100%;
+	padding:2px;
+	text-align: center;
+	vertical-align: bottom;
+	&-border{
+		border:3px solid @light;
+		border-radius: 100%;
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+		color:@light;
+		font-size: 2.7rem;
+
+	}
+}
+//Стилизация первого экрана 
+
+.header {
+	background: url(../img/firstscreen/main-bg.jpg) no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding-bottom: 2.5rem;
+	&-title {
+		margin-top: 11rem;
+		position: relative;
+		
+	}
+	&-contact{
+		background-color: rgba(0, 0, 0, 0.6);
+		padding: 1rem 0;
+	}
+	&-logo{
+		font-size: 0;
+		img {
+			display: inline-block;
+		}
+		span {
+			display:inline-block;
+			color:@light;
+			margin-left: 1rem;
+			font-size: 2rem;
+			.bold;
+			vertical-align: middle;
+		}
+	}
+}
+
+.phone {
+    &-link {
+	text-align: center;
+	span {
+		color:@light;
+		font-size: 2.5rem;
+		display: block;
+	}
+	a {
+      color:@button;
+	}
+   }
+   &-dinosaur {
+   	position: absolute;
+   	right: 0;
+   	bottom:0;
+   	max-width: 40%;
+   }
+}
+
+.button {
+	display: inline-block;
+	padding: 1rem 3rem;
+	color:@light;
+	.bold;
+	background-color: @button;
+	border:none;
+	text-transform: uppercase;
+	&_width {
+		width: 100%;
+	}
+
+}
+.game-controller {
+	display: block;
+	margin-top: 3rem;
+	max-width: 50%;
+}
+.suptitle {
+	background: @bg-border;
+    padding: 0.5rem;
+    display:block;
+    font-size: 3rem;
+    color:@light; 
+    position: relative;
+    margin-bottom: 0.3rem; //НУжно будет переделать 
+     &::after {
+     	content: '';
+     	position: absolute;
+     	right: -60px;
+	    top:0;
+	    border: 30px solid transparent;
+	    border-left: 30px solid @bg-border;
+	    display: inline-block;
+	    height: 100%;
+	    width: 0;
+
+	}
+	&-header {
+		display: block;
+		max-width: 70%;
+		color:@light;
+		font-size: 3rem;
+		&__bottom {
+			margin-bottom: 2rem;
+		}
+
+	}		
+}
+
+
+//Стилизация Второго экрана секция о нас 
+
+.about {
+	background-color: @bg-about;
+	background: url(../img/line.png) no-repeat bottom;
+	&-block {
+		font-size: 1.7rem;
+		margin: 3rem 0 ;
+	}
+}
+.product{
+	&-block {
+		h6{
+		font-size: 2rem;
+	      }
+	}
+	&-list {
+		list-style: none;
+		padding: 0;
+		font-size: 1.7rem;
+		min-height: 21rem;
+		position: relative;
+		padding-bottom: 3.5rem;
+		p{
+			position: absolute;
+			bottom: 0;
+			font-size: 2rem ;
+			span {
+				color:@price;
+				font-size: 2.3rem;
+			}
+		}
+
+		
+	}
+}
+.vrbox{
+	position: relative;
+	&-cube {
+		position: absolute;
+		top:50%;
+		transform:translateY(-50%);
+		right: -2%;
+
+	}
+	&-block {
+	display: inline-block;
+	min-height: 34rem;
+	margin-left: 3rem;
+	padding-top:20%;
+	.bold;
+	&-wrap{
+		padding-left:5rem;
+		display: block;
+	}
+	&-img{
+		text-align: center;
+		min-height: 34rem;
+		img {
+			display: inline-block;
+		}
+	}
+	&-title {
+		position: relative;
+		img {
+			display: inline-block;
+			position: absolute;
+			left: -5rem;
+			top:50%;
+			transform:translateY(-50%);
+		}
+		h4{
+			font-size: 2.2rem;
+			.bold;
+		}
+	}
+	
+	
+  }
+}
+// Стилизация 3 экрана 
+.order {
+	padding:2rem;
+	background: url(../img/thirdscreen/order-bg.jpg) no-repeat center;
+	-webkit-background-size: cover;
+	 background-size: cover; 
+	 color:@light;
+	 text-align: center;
+	 &-bottom {
+	 	padding:2rem;
+	 	background: url(../img/bg-form.jpg) no-repeat center;
+	 	-webkit-background-size: cover;
+	 	 background-size: cover; 
+	 	 color:@light;
+	 	 text-align: center;
+	 }
+	 &-info {
+	 	text-align: left;
+	 	p{
+	 		font-size: 3.5rem;
+	 		.bold;
+	 	}
+	 	span {
+	 		font-size: 1.8rem;
+	 		padding:0.5rem 2rem;
+	 		margin:1.5rem 0;
+	 	}
+	 	&-block{
+	 		&-subtitle {
+	 			text-align: left;
+	 			position: relative;
+	 			padding-left:5rem;
+	 			img {
+	 				position: absolute;
+	 				left: 0;
+	 				top:0;
+	 			}
+	 		}
+	 	}
+	 }
+}
+.form {
+	background: @bg-form;
+	border: 2px solid @bg-border;
+	padding:3rem 5rem;
+	
+	&-input {
+		background-color: @bg-form;
+		width: 100%;
+		border:2px solid @light;
+		padding:1rem 2rem;
+		color:@light;
+		font-size: 1.8rem;
+		margin: 0.5rem 0 ;
+	}
+	h4{
+		font-size: 2.2rem;
+	}
+	span {
+		font-size: 1.5rem;
+	}
+}
+.game {
+	background-color: #fcfcf6;
+}
+
+.work {
+	background: url(../img/fivescreen/bg-.jpg) no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	&-block {
+		text-align: center;
+		font-size: 1.7rem;
+		margin-bottom: 4rem;
+		.reg;
+		img {
+			display: inline-block;
+			max-width: 100%;
+		}
+		&-title{
+			position: relative;
+			min-height:21rem ;
+			text-align: center;
+		}
+		img{
+			display: inline-block;
+
+		}		
+	}
+	&-procces {
+		padding-bottom: 400px;
+	}
+}
+.circle {
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	transform:translateX(-50%);
+}
+.compatibility {
+
+	&-block {
+		text-align: center;
+		.reg;
+		font-size: 1.7rem;
+		margin-bottom: 4rem;
+		&-min {
+			span {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+}
+
+// Стилизация блока с видео 
+.video {
+	background: url(../img/video.jpg) no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover; 
+	&-wrap {
+		display: block;
+		text-align: center;
+		
+	}
+	&-title {
+		text-align: center;
+		display: inline-block;
+        font-size: 3rem;
+        color:@light;
+        vertical-align: middle;
+	}
+}
+// Стилизация блока с Играми
+.games {
+	background: url(../img/line.png) no-repeat bottom;
+	&-block {
+		text-align: left;
+		min-height: 20rem;
+		margin-bottom: 5rem;
+		&-icon {
+			margin-bottom: 2rem;
+			
+			img {
+				vertical-align: middle;
+			}
+
+		}
+		h5 {
+			font-size: 2.2rem;
+			.reg;
+		}
+		p {
+			font-size: 1.7rem;
+			.reg;
+		}
+	}
+}
+
+.comments {
+	background: url(../img/line.png) no-repeat bottom;
+	background-color: @bg-about;
+	&-text {
+		margin-top: 2rem;
+		.reg;
+	}
+	&-block{
+		border:1px solid @bg-border;
+		padding: 2rem;
+		border-radius: 5px;
+		margin-top: 2rem;
+	}
+}
+.media{
+	&-body {
+		vertical-align:bottom;
+	}
+}
+
+// Стилизация раздела как мы работаем 
+.hardwork {
+	background: url(../img/hardwork/bg-hardwork.jpg) no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	&-block {
+		text-align: center;
+		min-height: 25rem;
+		margin-bottom: 2rem;
+		p{
+			.reg;
+			font-weight: bold;
+			font-size: 1.7rem;
+		}
+	}
+	&-img {
+		min-height: 14rem;
+		margin-bottom: 1rem;
+		img {
+			display:inline-block;
+			vertical-align: bottom;
+
+		}
+	}
+}
+.question {
+	text-align: center;
+	padding:5rem 0;
+	&-block {
+		margin:0 auto;
+		text-align: center;
+		font-weight: bold; 
+		h2 {
+			font-weight: bold; 
+		}
+		a{
+			color:#000;
+			border-bottom: 1px dashed #000;
+
+		}
+
+	}
+}
+.footer{
+	background-color: #000;
+}
+
+//  Стилизация Форм обратной связи 
+
+.form{
+	&-wrap {
+		position: fixed;
+		top:0;
+		bottom: 0;
+		left:0;
+		right: 0;
+		background-color: #131414;
+	}
+	&-body {
+		display: inline-block;
+		border:3px solid @bg-border;
+		background-color: @bg-form;
+		position: fixed;
+		top:20%;
+		left: 50%;
+		transform: translate(-50%);
+		padding: 3rem 6rem 2rem;
+		color:@light;
+		text-align: center;
+		max-width: 40rem;
+	}
+	&-dialog {
+		position: relative;
+	}
+	&-close {
+		position: absolute;
+		border:3px solid @bg-border;
+		background-color: @bg-form;
+		border-radius: 100%;
+		top:-1.5rem;
+		right: -1.5rem;
+		color:@bg-border;
+		padding: 2px;
+		width: 3rem;
+		text-align: center;
+		font-size: 3rem;
+		line-height: 2.5rem;
+		z-index: 9;
+
+	}
+	&-content {
+		h4 {
+			font-size: 2.2rem;
+			margin-bottom: 1.5rem;
+		}
+		span {
+			display: block;
+			font-size: 1.5rem;	
+			margin-top: 1rem;
+		}
+	}
+}
+#button {
+	&-complex{
+		display: inline-block;
+		padding: 1rem 3rem;
+		color:@light;
+		.bold;
+		background-color: @button;
+		border:none;
+		text-transform: uppercase;
+	}
+}
+#form{
+	&-order{
+		display: none;
+	}
+	&-complex {
+		display: none;
+	}
+}
+
+
+// Стилизация Адаптивности 
+
+@media (max-width: 1199px){
+
+}
+@media (max-width: 991px){
+
+.order {
+	&-info{
+		text-align: center;
+		&-block{
+			&-subtitle {
+				padding-left:30%;
+				img{
+					left:15%;
+				} 
+			}
+		}
+	}
+}
+.game{
+
+	&-play {
+	  position: relative;
+	  padding-bottom: 30%;
+	}
+	.wrap-responsive {
+		position: absolute;
+		bottom: 0;
+
+	}
+}
+.work{
+	&-procces {
+		padding-bottom: 100px;
+	}
+	&-block {
+		min-height:30rem;
+	}
+}
+.compatibility {
+	padding-top: 50rem;
+}
+
+}
+@media (max-width: 768px){
+	.header{
+		&-logo {
+			text-align: center;
+		}
+	}
+	.phone{
+		&-link{
+			margin-top: 2rem;
+			a{
+				display: inline-block;
+				font-size: 2rem;
+			}
+			span {
+				display: inline-block;
+				margin-right: 2rem;
+			}
+		}
+		&-dinosaur {
+			right: -10%;
+			max-width: 45%;
+		}
+	}
+	.form {
+		&-body {
+			padding: 2rem 3rem;
+		}
+	}
+
+	
+}
