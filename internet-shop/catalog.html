@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Каталог товаров</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/favikon.png" type="image/png">
+</head>
+<body>
+		<header>
+			<div class="header-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-5">
+							<div class="help-block">
+								<ul class="help-block__list">
+									<li>Рубль</li>
+									<li>Русский</li>
+									<li>Помощь</li>
+								</ul>
+							</div>
+						</div>
+	                    <!-- Конец блока с  -->
+						<div class="col-lg-3 col-lg-offset-6 col-md-4 col-md-offset-4 col-sm-7 col-sm-offset-0">
+							<div class="account">
+								<ul class="account-list">
+									<li><a class="account-list__entry" href="#"><img src="img/header/icon-login.png" alt="Вход "> Вход</a></li>
+									<li><a  class="account-list__register" href="#"><img src="img/header/icon-register.png" alt="Регистрация"> Регистрация</a></li>
+									<li class="account__burger"><a href="#">&#9776;</a>
+										<ul>
+											<li><a href="#">Мой аккаунт</a></li>
+											<li><a href="#">Список пожеланий</a></li>
+											<li><a href="#">Проверить</a></li>
+											<li><a href="#">Корзина</a></li>
+											<li><a href="#">Выход</a></li>
+										</ul>
+
+									</li>
+								</ul>
+								<!-- account-list -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- header-top -->
+			<div class="header-middle">
+				<div class="container">
+					<div class="row header-flex">
+						<div class="col-sm-3 col-xs-6">
+							<div class="phone">
+								<img src="img/header/icon-phone.png" alt="Телефон"><span class="phone__number phone__number-mrleft">2300 - 3560 - 222</span>
+							</div>
+						</div>
+						<!-- Phone -->
+						<div class="col-sm-2 col-sm-offset-2 col-xs-6 col-xs-offset-0">
+							<div class="logo">
+								<img src="img/header/logo.png" alt="Логотип">
+							</div>
+						</div>
+						<!-- logo -->
+						<div class="col-sm-2 col-sm-offset-3">
+							<div class="cart">
+								<div class="cart-block">
+									<img src="img/header/icon-cart.png" alt="Корзина">
+									<span class="cart-count">0</span>
+								</div>
+							</div>
+						</div>
+						<!-- cart -->
+					</div>
+				</div>
+			</div>
+			<!-- header-midle -->
+			<div class="header-nav">
+				<div class="container">
+					<div class="row header-flex">
+						<div class="col-lg-5 col-md-4 col-sm-7">
+							<div class="search">
+								<div class="search-category">
+									<div class="search-category__title search-style">
+										<div class="search-category__btn">
+											<span>Категории товаров</span>
+										</div>
+									<ul class="search-category__list">
+										<li><a href="catalog.html">Стулья</a></li>
+										<li><a href="catalog.html">Столы</a></li>
+										<li><a href="catalog.html">Диваны</a></li>
+										<li><a href="catalog.html">Кровати</a></li>
+									</ul>
+									</div>
+								</div>
+
+								<div class="search-block hidden-xs">
+									<input class="search-style search-input" type="text" placeholder="Поиск товаров">
+								</div>
+						    	
+							</div>
+						</div>
+						<!-- search block -->
+						<div class="col-lg-7 col-lg-offset-0 col-md-8  col-md-offset-0 col-sm-1 col-sm-offset-4">
+							<nav class="nav">
+								<ul class="nav__list">
+									<li><a href="index.html">Главная</a></li>
+									<li><a href="catalog.html">Каталог</a></li>
+									<li><a href="catalog.html">Стулья</a></li>
+									<li><a href="catalog.html">Столы</a></li>
+									<li><a href="catalog.html">Диваны</a></li>
+									<li><a href="catalog.html">Кровати</a></li>
+									<li><a href="news.html">Новости</a></li>
+									<li id="nav-burger"><span class="nav-btn"></span></li> 
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- header-nav -->
+		</header>
+		<main>
+			<div class="container">
+				<div class="main-header">
+					<h2 class="main-header__title">Мебель для <strong>Спальной</strong></h2>
+					<p class="main-header__subtitle">Скидки до <span>25%</span>на всю продукцию</p>
+				</div>
+				<!-- main-header -->
+				<div class="main-separator">
+					<p>Главная / <span> Каталог</span></p>
+				</div>
+
+				<section>
+				<div class="row">
+					<div class="col-md-9">
+						<div class="catalog">
+							<div class="catalor-top">
+								<div class="row">
+									<div class="col-md-2">
+										<h2 class="category-title category-title-color">Каталог</h2>
+									</div>
+									<div class="col-md-5 col-md-offset-1">
+										<div class="category-filter">
+											<p>Фильтровать по </p>
+											<select name="">
+												<option value="">Цена: по возрастанию</option>
+												<option value="">Цена: по убыванию</option>
+												<option value="">Популярные</option>
+												<option value="">Новинки</option>
+											</select>
+										</div>
+										
+									</div>
+									<div class="col-md-3 col-md-offset-1">
+										<div class="category-filter">
+											<p>Показать  </p>
+										    <select name="">
+												<option value="">12</option>
+												<option value="">8</option>
+												<option value="">16</option>
+												<option value="">20</option>
+											</select>
+										</div>
+									</div>
+
+								</div>
+								<hr class="line">
+							</div>
+							<!-- Catalog-top -->
+							<div class="catalog-product">
+								<div class="row">
+									<!-- product-start 1-->
+									<div class="col-md-4 col-xs-6">
+										<div class="product">
+											<div class="product-image">
+												<img src="img/product/1.jpg" alt="Изображение товара">
+												<div class="product-sale"><span>sale</span></div>
+												<a class="product-view product-btn" href="product.html">Посмотреть</a>
+												<button class="product-buy product-btn"><img src="img/header/icon-cart.png" alt="">В корзину</button>
+											</div>
+											<div class="product-description">
+												<a href="product.html"><h3 class="product-title">Chairman 279 черное</h3></a>
+												<img src="img/stars.png" alt="" class="product-star">
+												<hr class="product-line">
+												<div class="product-bottom">
+													<div class="product-bottom__icon">
+														<div class="product-bottom-icon"><img src="img/like.png" alt=""></div>
+														<div class="product-bottom-icon"><img src="img/compare.png" alt=""></div>
+													</div>
+													<!-- /.product-bottom__icon -->
+													<div class="product-bottom__price">
+														<div class="product-price-sale">
+															<span class="product-price-sale-style">7000</span>
+														</div>
+														<div class="product-price">
+															<span class="product-price-style">5000</span>
+														</div>
+													</div>
+													<!-- /.product-bottom__price -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- product end 1-->
+									<!-- product-start 2-->
+									<div class="col-md-4 col-xs-6">
+										<div class="product">
+											<div class="product-image">
+												<img src="img/product/2.jpg" alt="Изображение товара">
+												<div class="product-sale"><span>sale</span></div>
+												<a class="product-view product-btn" href="product.html">Посмотреть</a>
+												<button class="product-buy product-btn"><img src="img/header/icon-cart.png" alt="">В корзину</button>
+											</div>
+											<div class="product-description">
+												<a href="product.html"><h3 class="product-title">Chairman 279 черное</h3></a>
+												<img src="img/stars.png" alt="" class="product-star">
+												<hr class="product-line">
+												<div class="product-bottom">
+													<div class="product-bottom__icon">
+														<div class="product-bottom-icon"><img src="img/like.png" alt=""></div>
+														<div class="product-bottom-icon"><img src="img/compare.png" alt=""></div>
+													</div>
+													<!-- /.product-bottom__icon -->
+													<div class="product-bottom__price">
+														<div class="product-price-sale">
+															<span class="product-price-sale-style">7000</span>
+														</div>
+														<div class="product-price">
+															<span class="product-price-style">5000</span>
+														</div>
+													</div>
+													<!-- /.product-bottom__price -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- product end 2-->
+									<!-- product-start 3-->
+									<div class="col-md-4 col-xs-6">
+										<div class="product">
+											<div class="product-image">
+												<img src="img/product/3.jpg" alt="Изображение товара">
+												<div class="product-sale"><span>sale</span></div>
+												<a class="product-view product-btn" href="product.html">Посмотреть</a>
+												<button class="product-buy product-btn"><img src="img/header/icon-cart.png" alt="">В корзину</button>
+											</div>
+											<div class="product-description">
+												<a href="product.html"><h3 class="product-title">Chairman 279 черное</h3></a>
+												<img src="img/stars.png" alt="" class="product-star">
+												<hr class="product-line">
+												<div class="product-bottom">
+													<div class="product-bottom__icon">
+														<div class="product-bottom-icon"><img src="img/like.png" alt=""></div>
+														<div class="product-bottom-icon"><img src="img/compare.png" alt=""></div>
+													</div>
+													<!-- /.product-bottom__icon -->
+													<div class="product-bottom__price">
+														<div class="product-price-sale">
+															<span class="product-price-sale-style">7000</span>
+														</div>
+														<div class="product-price">
+															<span class="product-price-style">5000</span>
+														</div>
+													</div>
+													<!-- /.product-bottom__price -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- product end 3-->
+									<!-- product-start 4-->
+									<div class="col-md-4 col-xs-6">
+										<div class="product">
+											<div class="product-image">
+												<img src="img/product/4.jpg" alt="Изображение товара">
+												<div class="product-sale"><span>sale</span></div>
+												<a class="product-view product-btn" href="product.html">Посмотреть</a>
+												<button class="product-buy product-btn"><img src="img/header/icon-cart.png" alt="">В корзину</button>
+											</div>
+											<div class="product-description">
+												<a href="product.html"><h3 class="product-title">Chairman 279 черное</h3></a>
+												<img src="img/stars.png" alt="" class="product-star">
+												<hr class="product-line">
+												<div class="product-bottom">
+													<div class="product-bottom__icon">
+														<div class="product-bottom-icon"><img src="img/like.png" alt=""></div>
+														<div class="product-bottom-icon"><img src="img/compare.png" alt=""></div>
+													</div>
+													<!-- /.product-bottom__icon -->
+													<div class="product-bottom__price">
+														<div class="product-price-sale">
+															<span class="product-price-sale-style">7000</span>
+														</div>
+														<div class="product-price">
+															<span class="product-price-style">5000</span>
+														</div>
+													</div>
+													<!-- /.product-bottom__price -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- product end 4-->
+									<!-- product-start 5-->
+									<div class="col-md-4 col-xs-6">
+										<div class="product">
+											<div class="product-image">
+												<img src="img/product/5.jpg" alt="Изображение товара">
+												<div class="product-sale"><span>sale</span></div>
+												<a class="product-view product-btn" href="product.html">Посмотреть</a>
+												<button class="product-buy product-btn"><img src="img/header/icon-cart.png" alt="">В корзину</button>
+											</div>
+											<div class="product-description">
+												<a href="product.html"><h3 class="product-title">Chairman 279 черное</h3></a>
+												<img src="img/stars.png" alt="" class="product-star">
+												<hr class="product-line">
+												<div class="product-bottom">
+													<div class="product-bottom__icon">
+														<div class="product-bottom-icon"><img src="img/like.png" alt=""></div>
+														<div class="product-bottom-icon"><img src="img/compare.png" alt=""></div>
+													</div>
+													<!-- /.product-bottom__icon -->
+													<div class="product-bottom__price">
+														<div class="product-price-sale">
+															<span class="product-price-sale-style">7000</span>
+														</div>
+														<div class="product-price">
+															<span class="product-price-style">5000</span>
+														</div>
+													</div>
+													<!-- /.product-bottom__price -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- product end 5-->
+									<!-- product-start 6 -->
+									<div class="col-md-4 col-xs-6">
+										<div class="product">
+											<div class="product-image">
+												<img src="img/product/6.jpg" alt="Изображение товара">
+												<div class="product-sale"><span>sale</span></div>
+												<a class="product-view product-btn" href="product.html">Посмотреть</a>
+												<button class="product-buy product-btn"><img src="img/header/icon-cart.png" alt="">В корзину</button>
+											</div>
+											<div class="product-description">
+												<a href="product.html"><h3 class="product-title">Chairman 279 черное</h3></a>
+												<img src="img/stars.png" alt="" class="product-star">
+												<hr class="product-line">
+												<div class="product-bottom">
+													<div class="product-bottom__icon">
+														<div class="product-bottom-icon"><img src="img/like.png" alt=""></div>
+														<div class="product-bottom-icon"><img src="img/compare.png" alt=""></div>
+													</div>
+													<!-- /.product-bottom__icon -->
+													<div class="product-bottom__price">
+														<div class="product-price-sale">
+															<span class="product-price-sale-style">7000</span>
+														</div>
+														<div class="product-price">
+															<span class="product-price-style">5000</span>
+														</div>
+													</div>
+													<!-- /.product-bottom__price -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- product end 6-->
+									<!-- product-start 7 -->
+									<div class="col-md-4 col-xs-6">
+										<div class="product">
+											<div class="product-image">
+												<img src="img/product/7.jpg" alt="Изображение товара">
+												<div class="product-sale"><span>sale</span></div>
+												<a class="product-view product-btn" href="product.html">Посмотреть</a>
+												<button class="product-buy product-btn"><img src="img/header/icon-cart.png" alt="">В корзину</button>
+											</div>
+											<div class="product-description">
+												<a href="product.html"><h3 class="product-title">Chairman 279 черное</h3></a>
+												<img src="img/stars.png" alt="" class="product-star">
+												<hr class="product-line">
+												<div class="product-bottom">
+													<div class="product-bottom__icon">
+														<div class="product-bottom-icon"><img src="img/like.png" alt=""></div>
+														<div class="product-bottom-icon"><img src="img/compare.png" alt=""></div>
+													</div>
+													<!-- /.product-bottom__icon -->
+													<div class="product-bottom__price">
+														<div class="product-price-sale">
+															<span class="product-price-sale-style">7000</span>
+														</div>
+														<div class="product-price">
+															<span class="product-price-style">5000</span>
+														</div>
+													</div>
+													<!-- /.product-bottom__price -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- product end7 -->
+									<!-- product-start8 -->
+									<div class="col-md-4 col-xs-6">
+										<div class="product">
+											<div class="product-image">
+												<img src="img/product/8.jpg" alt="Изображение товара">
+												<div class="product-sale"><span>sale</span></div>
+												<a class="product-view product-btn" href="product.html">Посмотреть</a>
+												<button class="product-buy product-btn"><img src="img/header/icon-cart.png" alt="">В корзину</button>
+											</div>
+											<div class="product-description">
+												<a href="product.html"><h3 class="product-title">Chairman 279 черное</h3></a>
+												<img src="img/stars.png" alt="" class="product-star">
+												<hr class="product-line">
+												<div class="product-bottom">
+													<div class="product-bottom__icon">
+														<div class="product-bottom-icon"><img src="img/like.png" alt=""></div>
+														<div class="product-bottom-icon"><img src="img/compare.png" alt=""></div>
+													</div>
+													<!-- /.product-bottom__icon -->
+													<div class="product-bottom__price">
+														<div class="product-price-sale">
+															<span class="product-price-sale-style">7000</span>
+														</div>
+														<div class="product-price">
+															<span class="product-price-style">5000</span>
+														</div>
+													</div>
+													<!-- /.product-bottom__price -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- product end 8-->
+									<!-- product-start 9-->
+									<div class="col-md-4 col-xs-6">
+										<div class="product">
+											<div class="product-image">
+												<img src="img/product/1.jpg" alt="Изображение товара">
+												<div class="product-sale"><span>sale</span></div>
+												<a class="product-view product-btn" href="product.html">Посмотреть</a>
+												<button class="product-buy product-btn"><img src="img/header/icon-cart.png" alt="">В корзину</button>
+											</div>
+											<div class="product-description">
+												<a href="product.html"><h3 class="product-title">Chairman 279 черное</h3></a>
+												<img src="img/stars.png" alt="" class="product-star">
+												<hr class="product-line">
+												<div class="product-bottom">
+													<div class="product-bottom__icon">
+														<div class="product-bottom-icon"><img src="img/like.png" alt=""></div>
+														<div class="product-bottom-icon"><img src="img/compare.png" alt=""></div>
+													</div>
+													<!-- /.product-bottom__icon -->
+													<div class="product-bottom__price">
+														<div class="product-price-sale">
+															<span class="product-price-sale-style">7000</span>
+														</div>
+														<div class="product-price">
+															<span class="product-price-style">5000</span>
+														</div>
+													</div>
+													<!-- /.product-bottom__price -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- product end 9-->
+
+
+
+
+
+
+
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- catalog -->
+					<div class="col-md-3">
+						<aside class="sidebar">
+							<div class="widget widget-category">
+								<h5>Фильтр по категориям</h5>
+								<hr class="line">
+								<ul class="category-list">
+									<li>Гарнитуры</li>
+									<li>Стулья</li>
+									<li>Столы</li>
+									<li>Кровати</li>
+					
+								</ul>
+							</div>
+							<!-- widget-category -->
+							<div class="widget  widget-color ">
+								<h5>Фильтр по цветам</h5>
+								<hr class="line">
+								<ul class="category-color">
+									<li class="color-red">Красный</li>
+									<li class="color-black">Черный</li>
+									<li class="color-yellow">Желтый</li>
+									<li class="color-blue">Синий</li>
+									<li class="color-pink">Розовый</li>
+									<li class="color-green">Зеленый</li>
+								</ul>
+							</div>
+							<!-- widget color-->
+							<div class="widget widget-size">
+								<h5>Фильтр по размерам</h5>
+								<hr class="line">
+								 <ul class="widget-list__size">
+                                    <li><input name="size" type="checkbox"> S</li>
+                                    <li><input name="size" type="checkbox"> M</li>
+                                    <li><input name="size" type="checkbox"> L</li>
+                                    <li><input name="size" type="checkbox"> XL</li>
+                                    <li><input name="size" type="checkbox"> XXL</li>
+								 </ul>
+							</div>
+							<div class="widget widget-size">
+								<h5>Фильтр по размерам</h5>
+								<hr class="line">
+								<ul class="widget-tag">
+									<li>Стол</li>
+									<li>Стул</li>
+									<li>Сумка</li>
+									<li>Женщины</li>
+									<li>Мода</li>
+									<li>Одежда</li>
+								</ul>
+							</div>
+							<div class="widget widget-product">
+								<h5>Просмотренные товары</h5>
+								<!-- product -start -->
+								<div class="product">
+									<div class="product-image">
+										<img src="img/product/7.jpg" alt="Изображение товара">
+										<div class="product-sale"><span>sale</span></div>
+										<a class="product-view product-btn" href="product.html">Посмотреть</a>
+										<button class="product-buy product-btn"><img src="img/header/icon-cart.png" alt="">В корзину</button>
+									</div>
+									<div class="product-description">
+										<a href="product.html"><h3 class="product-title">Chairman 279 черное</h3></a>
+										<img src="img/stars.png" alt="" class="product-star">
+										<hr class="product-line">
+										<div class="product-bottom">
+											<div class="product-bottom__icon">
+												<div class="product-bottom-icon"><img src="img/like.png" alt=""></div>
+												<div class="product-bottom-icon"><img src="img/compare.png" alt=""></div>
+											</div>
+											<!-- /.product-bottom__icon -->
+											<div class="product-bottom__price">
+												<div class="product-price-sale">
+													<span class="product-price-sale-style">7000</span>
+												</div>
+												<div class="product-price">
+													<span class="product-price-style">5000</span>
+												</div>
+											</div>
+											<!-- /.product-bottom__price -->
+										</div>
+									</div>
+								</div>
+								<!-- product end -->
+								
+								 
+							</div>
+						</aside>
+					</div>
+					<!-- sidebar -->
+				</div>
+			   </section>
+
+			  <section class="brand">
+			  	<div class="brand-slider">
+			  		<div class="brand-block"><img src="img/brand/1.png" alt=""></div>
+			  		<div class="brand-block"><img src="img/brand/2.png" alt=""></div>
+			  		<div class="brand-block"><img src="img/brand/3.png" alt=""></div>
+			  		<div class="brand-block"><img src="img/brand/4.png" alt=""></div>
+			  		<div class="brand-block"><img src="img/brand/5.png" alt=""></div>
+			  		<div class="brand-block"><img src="img/brand/6.png" alt=""></div>
+			  		<div class="brand-block"><img src="img/brand/3.png" alt=""></div>
+			  	</div>
+			  </section>
+			</div>
+		<section class="letter">
+			<p>Новостная рассылка <input class="letter-input" type="text" placeholder="Введите ваш E-mail"> <button class="letter-btn">&#8594;</button></p>
+		</section>
+			
+		</main>
+
+		<footer class="footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="footer-nav">
+						<div class="row">
+							<div class="col-md-3 col-sm-4 col-xs-6">
+								<div class="footer-nav__block">
+									<h2 class="footer-title">Информация</h2>
+									<ul class="footer-list">
+										<li><a href="#">О нас</a></li>
+										<li><a href="#">Конфиденциальность</a></li>
+										<li><a href="#">Условия</a></li>
+										<li><a href="#">Тех. поддержка</a></li>
+									</ul>
+								</div>
+							</div>
+								<!-- footer-block1 -->
+								<div class="col-md-3 col-sm-4 col-xs-6 hidden-xs">
+									<div class="footer-nav__block">
+										<h2 class="footer-title">Личный кабинет</h2>
+										<ul class="footer-list">
+											<li><a href="#">Вход</a></li>
+											<li><a href="#">Корзина</a></li>
+											<li><a href="#">Список покупок</a></li>
+											<li><a href="#">Заказы</a></li>
+										</ul>
+									</div>
+								</div>
+								<!-- footer-block 2 -->
+								<div class="col-md-3 col-sm-4 col-xs-6 hidden-sm">
+									<div class="footer-nav__block">
+										<h2 class="footer-title">Информация</h2>
+										<ul class="footer-list">
+											<li><a href="#">Новые товары</a></li>
+											<li><a href="#">Лучшие товары</a></li>
+											<li><a href="#">Специальные товары</a></li>
+											<li><a href="#">
+												Наши магазины
+											</a></li>
+										</ul>
+									</div>
+								</div>
+								<!-- fooer-block 3 -->
+								<div class="col-md-3 col-sm-4 col-xs-6">
+									<div class="footer-nav__block">
+										<h2 class="footer-title">Заказы</h2>
+										<ul class="footer-list">
+											<li><a href="#">Способы оплаты</a></li>
+											<li><a href="#">Оплата и доставка</a></li>
+											<li><a href="#">Возврат товара</a></li>
+											<li><a href="#">Доставка</a></li>
+										</ul>
+										<div class="payment">
+											<img src="img/payment-item/payment.png" alt="">
+										</div>
+									</div>
+								</div>
+								<!-- footer-block 4 -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer-top -->
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+							<div class="copyrigth">
+								<p>&copy; Copyright 2018 Bazar | Все права защищены</p>
+							</div>
+						</div>
+						<div class="col-md-3 col-md-offset-1 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+							<div class="social">
+								<ul class="social-nav">
+									<li><a href="#"><img src="img/social-icon/1.png" alt=""></a></li>
+									<li><a href="#"><img src="img/social-icon/2.png" alt=""></a></li>
+									<li><a href="#"><img src="img/social-icon/3.png" alt=""></a></li>
+									<li><a href="#"><img src="img/social-icon/4.png" alt=""></a></li>
+									<li><a href="#"><img src="img/social-icon/5.png" alt=""></a></li>
+									<li><a href="#"><img src="img/social-icon/6.png" alt=""></a></li>
+									<li><a href="#"><img src="img/social-icon/7.png" alt=""></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<script src="slick/slick.min.js"></script>
+	<link  href="fotorama/fotorama.css" rel="stylesheet"> 
+	<script src="fotorama/fotorama.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		$('.sale-slider').slick({
+		  autoplay: true,
+		  autoplaySpeed: 4000,
+		  prevArrow: '<div class="sale-slider__dots sale-slider__dots-prev"><img src="img/prev.png" alt="prev" /></div>',
+		  nextArrow: '<div class="sale-slider__dots sale-slider__dots-next"><img src="img/next.png" alt="next" /></div>'
+		  });
+
+		$('.brand-slider').slick({
+		  autoplay: true,
+		  autoplaySpeed: 4000,
+		  infinite: true,
+		  slidesToShow: 6,
+		  slidesToScroll: 1,
+		  prevArrow: '<div class="brand-btn brand-btn-prev"><img src="img/prev.png" alt="prev" /></div>',
+		  nextArrow: '<div class="brand-btn brand-btn-next"><img src="img/next.png" alt="next" /></div>',
+		  responsive: [
+		      {
+		        breakpoint: 1199,
+		        settings: {
+		          slidesToShow: 3,
+		          slidesToScroll: 3,
+		          infinite: true,
+		          dots: true
+		        }
+		      },
+		      {
+		        breakpoint: 991,
+		        settings: {
+		          slidesToShow: 4,
+		          slidesToScroll: 2
+		        }
+		      },
+		      {
+		        breakpoint: 768,
+		        settings: {
+		          slidesToShow: 2,
+		          slidesToScroll: 2
+		        }
+		      }
+		    ]
+		  });
+		$('.feedback-slider').slick({
+		  autoplay: true,
+		  autoplaySpeed: 4000,
+		  dots: true
+		  });
+			$('.hot-sale_slider').slick({
+		  autoplay: true,
+		  autoplaySpeed: 4000
+		  });
+
+	</script>
+	<script src="https://e-timer.ru/js/etimer.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			jQuery(".eTimer").eTimer({
+				etType: 1, etDate: "13.11.2018.0.0", etTitleText: "", etTitleSize: 20, etShowSign: 1, etSep: "", etFontFamily: "Trebuchet MS", etTextColor: "black", etPaddingTB: 5, etPaddingLR: 5, etBackground: "transparent", etBorderSize: 0, etBorderRadius: 10, etBorderColor: "white", etShadow: " 0px 0px 10px 0px transparent", etLastUnit: 4, etNumberFontFamily: "Impact", etNumberSize: 20, etNumberColor: "white", etNumberPaddingTB: 0, etNumberPaddingLR: 5, etNumberBackground: "black", etNumberBorderSize: 0, etNumberBorderRadius: 5, etNumberBorderColor: "white", etNumberShadow: "inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5)"
+			});
+		});
+	</script>
+</body>
+</html>
