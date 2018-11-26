@@ -384,6 +384,8 @@ section {
 .eTimer {
 	position: absolute;
 	bottom:0;
+	left: 15%;
+	
 }
 .hotsale {
 	&-relative {
@@ -411,12 +413,6 @@ section {
 
 .sale-slider{
 	
-	img {
-		width: 100%;
-		height: auto;
-		max-height: 47rem;
-
-	}
 	&__info {
 		position: absolute;
 		top:50%;
@@ -490,6 +486,11 @@ section {
 .sale-slide {
 	position: relative;
 	max-height: 47rem;
+	img {
+	    width: 100%;
+	    height: auto;
+		max-height: 47rem;
+		}
 }
 
 
@@ -769,8 +770,8 @@ section {
 // Вывод постов 
 
 .post {
+
 	&-thumbnails {
-		
 		img{
 			width: 100%;
 			display: inline-block;
@@ -781,11 +782,11 @@ section {
 	&-body {
 		position: relative;
 		text-align: center;
-		min-height: 19rem;
+		min-height: 24rem;
+
 	}
 	&-content{
 		
-	
 		background-color: @ligth;
 		position: absolute;
 		top: -3rem;
@@ -794,6 +795,8 @@ section {
 		width: 80%;
 		text-align: left;
 		font-size: 1.3rem;
+		min-height: 23rem;
+
 	}
 	&-info {
 		font-size: 1.4rem
@@ -814,6 +817,7 @@ section {
 		left:50%;
 		transform: translateX(-50%);
 		padding:5px 10px ;
+		bottom:1rem;
 		&:hover {
 			background-color: @active;
 			color:@ligth;
@@ -872,6 +876,7 @@ section {
 
 }
 .feedback {
+	padding-bottom: 1rem;
 	&-block {
 		text-align: center;
 		font-size: 1.4rem;
@@ -1182,8 +1187,182 @@ section {
 	}
 }
 
+.card{
+	&-product{
+		&-block {
+			border-top: 1px solid @border-art;
+			padding: 1rem 0;
+			margin-top: 1rem;
+			font-size: 1.2rem;
+			strong {
+				display: inline-block;
+				min-width: 10rem;
+			}
+		}
+		&-count {
+			margin-top: 1rem;
+			span {
+				font-size: 1.6rem;
+			}
 
+		}
+		&__quantity {
+			display: inline-block;
+			border: 1px solid @border-art;
+			padding: .4rem 0;
+			width: 6rem;
+			text-align: center;
+			font-size: 1.6rem;
+			margin-right: 1rem;
+		}
+		&__change-count {
+			display: inline-block;
+			border: 1px solid @border-art;
+			padding: .4rem 1rem;
+			font-size: 1.6rem;
+			margin: 0 3px;
+			&:hover {
+				border: 1px solid @active;
+				color:@active;
+			}
 
+		}
+	}
+	
+}
+.quick-title {
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+
+.product{
+	&-tabs {
+		display: inline-block;
+	}
+	&-tab{
+		text-transform: uppercase;
+		font-size: 1.1rem;
+		font-weight: 600;
+		display: inline-block;
+		padding: 5px 15px;
+		cursor: pointer;
+		border: 1px solid @border-art;
+		margin: 0;
+		box-sizing: border-box;
+		margin-left: -4px;
+		&-active {
+			border-bottom:0;
+			color:@active;
+		}
+		&__content{
+			font-size: 1.3rem;
+			margin-top: 1rem;
+		}
+	}
+}
+.complex {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #000;
+}
+.input {
+	display: inline-block;
+	width: 100%;
+	margin-top: 1rem;
+	border: 1px solid  @border-art;
+	padding: .5rem;
+
+	&-textarea{
+		display: block;
+		width: 100%;
+	}
+	&-btn {
+		display: inline-block;
+		color: @ligth;
+		background-color: @element-slider;
+		border: none;
+		width: 100%;
+		padding: .5rem 2rem;
+		text-transform: uppercase;
+		margin-top: 1rem;
+	}
+}
+
+.filter-btn {
+	display: none;
+}
+// Стили для табов 
+
+// Модальные окна 
+.popup {
+	&-wrap {
+		display: none;
+		z-index: 99;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, .3);
+	}
+	&-body {
+		display: inline-block;
+		background-color: @ligth;
+		padding: 2rem 3rem;
+		position: relative;
+		text-align: center;
+		top: 3rem;
+		left: 50%;
+		transform: translateX(-50%);
+		min-width: 30rem;
+
+	}
+	&-title {
+		h3{
+			font-size: 3rem;
+			font-weight: 400;
+			margin-bottom: 2rem;
+		}
+	}
+	&-close {
+		position: absolute;
+		top:0;
+		right: 0;
+		display: inline-block;
+		font-size: 1.5rem;
+		background-color: #000;
+		padding:3px;
+		width:2rem ;
+		cursor: pointer;
+		color: @ligth;
+	}
+	&-body {
+		label {
+			display: block;
+			text-align: left;
+			font-size: 1.4rem;
+			font-weight: 300;
+		}
+	}
+	&-input {
+		display: inline-block;
+		width: 100%;
+		padding:5px;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		min-width: 30rem;
+	}
+	&-btn {
+		display: inline-block;
+		border: none;
+		background-color: @active;
+		padding: 8px 15px;
+		color: @ligth;
+		text-transform: uppercase;
+	}
+}
 
 //Responsiv 
 @media (max-width: 1199px){
@@ -1261,8 +1440,37 @@ section {
 
 .hidden-sm {
 	display: none;
+}   
+.sidebar {
+	&-position {
+    position: relative;
+	}
+	&-responsive {
+    position: absolute;
+    top: 5%;
+    right: -100%;
+    background-color: @ligth;
+    z-index: 10;
+    padding-left: 1rem;
+    max-width: 20rem;
+    &__position {
+    	right: 0;
+    	transition-duration: 0.4s;
+    }
+	}
 }
-
+.filter-btn {
+	display: block;
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid  @border-art;
+	border-radius: 5px ;
+	margin-left: 1rem;
+	cursor: pointer; 
+	&:hover {
+		background-color: darken(@ligth, 5%);
+		}
+	}
 
 }
 @media (max-width: 768px){
@@ -1314,7 +1522,13 @@ section {
 .search-category {
 	width: 100%;
 }
-
+.letter {
+	display: block;
+	text-align: center;
+	&-input {
+		margin-top: 1rem;
+	}
+}
 
 }
 

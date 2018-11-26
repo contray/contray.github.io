@@ -124,7 +124,7 @@
 		<div class="container">
 			<div class="promotions">
 				<div class="row">
-					 <div class="col-md-3 col-xs-0 hotsale-relative hidden-sm">
+					 <div class="col-lg-4 col-md-3 col-xs-0 hotsale-relative hidden-sm">
 					 	<div class="hot-sale_slider">
 					 		<!-- Start slide -->
 					 			<div class="hotsale">
@@ -336,10 +336,10 @@
 							</div> 
 						</div>
 						<div class="col-md-6">
-							<div class="col-md-12">
+							<div class="col-md-12 hidden-sm">
 								<div class="special-money"><img src="img/23.jpg" alt=""></div>
 							</div>
-							<div class="col-md-12">
+							<div class="col-md-12 hidden-sm">
 								<div class="special-collection"><img src="img/45.png" alt=""></div>
 							</div>
 						</div>
@@ -659,10 +659,11 @@
 									<div class="post-excert">
 										<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего напоивший парадигматическая реторический. Использовало взобравшись своего домах наш сбить?</p>
 									</div>
-									<a class="product-btn post-btn" href="">Читать далее</a>	
+										
 								</div>
-								
+								<a class="product-btn post-btn" href="">Читать далее</a>
 							</div>
+							<!-- post-body -->
 						</div>
 					</div>
 					<!-- post -end-->
@@ -686,10 +687,11 @@
 									<div class="post-excert">
 										<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего напоивший парадигматическая реторический. Использовало взобравшись своего домах наш сбить?</p>
 									</div>
-										<a class="product-btn post-btn" href="">Читать далее</a>
+										
 								</div>
-								
+								<a class="product-btn post-btn" href="">Читать далее</a>
 							</div>
+							<!-- post-body -->
 						</div>
 					</div>
 					<!-- post -end2-->
@@ -713,10 +715,12 @@
 									<div class="post-excert">
 										<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего напоивший парадигматическая реторический. Использовало взобравшись своего домах наш сбить?</p>
 									</div>
-										<a class="product-btn post-btn" href="">Читать далее</a>
+										
 								</div>
 								
+								<a class="product-btn post-btn" href="">Читать далее</a>
 							</div>
+							<!-- post-body -->
 						</div>
 					</div>
 					<!-- post -end-->
@@ -833,9 +837,7 @@
 										<li><a href="#">Новые товары</a></li>
 										<li><a href="#">Лучшие товары</a></li>
 										<li><a href="#">Специальные товары</a></li>
-										<li><a href="#">
-											Наши магазины
-										</a></li>
+										<li><a href="#">Наши магазины</a></li>
 									</ul>
 								</div>
 							</div>
@@ -885,10 +887,59 @@
 			</div>
 		</div>
 	</footer>
+   <!-- modal window -->
+   <div class="popup-wrap" id="login">
+   	<div class="popup-body">
+   		<div class="popup-close">&times;</div>
+   		<!-- /.window-close -->
+   		<div class="popup-title">
+   			<h3>Авторизация</h3>
+   		</div>
+   		<!-- /.window-title -->
+   		<div class="popup-content">
+   			<form action="#">
+   			    <label for="#input-login">Введите ваш логин</label>
+   			    <input class="popup-input" id="input-login" type="text" required>
+   			    <label for="#input-password">Введите ваш пароль</label>
+   			    <input class="popup-input" id="input-password" type="password" required>
+   			    <input class="popup-btn" type="submit" value="Войти">
+   			</form>
+   		</div>
+   		<!-- /.window-content -->
+   	</div>
+   	<!-- /.window-body -->
+   </div>
+   <!-- /.window-wrap -->
+
+   <div class="popup-wrap" id="register">
+   	<div class="popup-body">
+   		<div class="popup-close" id="register-close">&times;</div>
+   		<!-- /.window-close -->
+   		<div class="popup-title">
+   			<h3>Авторизация</h3>
+   		</div>
+   		<!-- /.window-title -->
+   		<div class="popup-content">
+   			<form action="#">
+   				<label for="#input-name">Введите ваше имя</label>
+   			    <input class="popup-input" id="input-name" type="text" required>
+   			    <label for="#input-login2">Введите ваш логин</label>
+   			    <input class="popup-input" id="input-login2" type="text" required>
+   			    <label for="#input-password2">Введите ваш пароль</label>
+   			    <input class="popup-input" id="input-password2" type="password" required>
+   			    <label for="#input-password3">Повторите ваш пароль</label>
+   			    <input class="popup-input" id="input-password3" type="password" required>
+   			    <input class="popup-btn" type="submit" value="Зарегистрироваться">
+   			</form>
+   		</div>
+   		<!-- /.window-content -->
+   	</div>
+   	<!-- /.window-body -->
+   </div>
+   <!-- /.window-wrap -->
 
 
-
-   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+   <script src="js/jquery-1.12.4.min.js"></script>
    <link rel="stylesheet" href="slick/slick.css">
    <link rel="stylesheet" href="slick/slick-theme.css">
    <script src="slick/slick.min.js"></script>
@@ -952,7 +1003,7 @@
    <script type="text/javascript">
    	jQuery(document).ready(function() {
    		jQuery(".eTimer").eTimer({
-   			etType: 1, etDate: "13.11.2018.0.0", etTitleText: "", etTitleSize: 20, etShowSign: 1, etSep: "", etFontFamily: "Trebuchet MS", etTextColor: "black", etPaddingTB: 5, etPaddingLR: 5, etBackground: "transparent", etBorderSize: 0, etBorderRadius: 10, etBorderColor: "white", etShadow: " 0px 0px 10px 0px transparent", etLastUnit: 4, etNumberFontFamily: "Impact", etNumberSize: 20, etNumberColor: "white", etNumberPaddingTB: 0, etNumberPaddingLR: 5, etNumberBackground: "black", etNumberBorderSize: 0, etNumberBorderRadius: 5, etNumberBorderColor: "white", etNumberShadow: "inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5)"
+   			etType: 1, etDate: "13.11.2018.0.0", etTitleText: "", etTitleSize: 20, etShowSign: 1, etSep: "", etFontFamily: "Trebuchet MS", etTextColor: "black", etPaddingTB: 5, etPaddingLR: 5, etBackground: "transparent", etBorderSize: 0, etBorderRadius: 10, etBorderColor: "white", etShadow: " 0px 0px 10px 0px transparent", etLastUnit: 4, etNumberFontFamily: "Impact", etNumberSize: 30, etNumberColor: "white", etNumberPaddingTB: 0, etNumberPaddingLR: 5, etNumberBackground: "black", etNumberBorderSize: 0, etNumberBorderRadius: 5, etNumberBorderColor: "white", etNumberShadow: "inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5)"
    		});
    	});
    </script>

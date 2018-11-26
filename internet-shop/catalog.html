@@ -131,15 +131,15 @@
 				</div>
 
 				<section>
-				<div class="row">
-					<div class="col-md-9">
+				<div class="row sidebar-position">
+					<div class="col-md-9 col-xs-12">
 						<div class="catalog">
 							<div class="catalor-top">
 								<div class="row">
-									<div class="col-md-2">
+									<div class="col-md-2 ">
 										<h2 class="category-title category-title-color">Каталог</h2>
 									</div>
-									<div class="col-md-5 col-md-offset-1">
+									<div class="col-md-5 col-md-offset-1 col-xs-6 col-xs-offset-0">
 										<div class="category-filter">
 											<p>Фильтровать по </p>
 											<select name="">
@@ -151,7 +151,7 @@
 										</div>
 										
 									</div>
-									<div class="col-md-3 col-md-offset-1">
+									<div class="col-md-3 col-md-offset-1 col-xs-6 col-xs-offset-0">
 										<div class="category-filter">
 											<p>Показать  </p>
 										    <select name="">
@@ -160,8 +160,10 @@
 												<option value="">16</option>
 												<option value="">20</option>
 											</select>
+											<div class="filter-btn">Фильтр</div>
 										</div>
 									</div>
+									
 
 								</div>
 								<hr class="line">
@@ -480,7 +482,7 @@
 						</div>
 					</div>
 					<!-- catalog -->
-					<div class="col-md-3">
+					<div class="col-md-3 col-xs-3 sidebar-responsive ">
 						<aside class="sidebar">
 							<div class="widget widget-category">
 								<h5>Фильтр по категориям</h5>
@@ -530,7 +532,7 @@
 									<li>Одежда</li>
 								</ul>
 							</div>
-							<div class="widget widget-product">
+							<div class="widget widget-product hidden-sm">
 								<h5>Просмотренные товары</h5>
 								<!-- product -start -->
 								<div class="product">
@@ -563,9 +565,8 @@
 									</div>
 								</div>
 								<!-- product end -->
-								
-								 
 							</div>
+								
 						</aside>
 					</div>
 					<!-- sidebar -->
@@ -678,34 +679,67 @@
 				</div>
 			</div>
 		</footer>
+		<!-- modal window -->
+		<div class="popup-wrap" id="login">
+			<div class="popup-body">
+				<div class="popup-close">&times;</div>
+				<!-- /.window-close -->
+				<div class="popup-title">
+					<h3>Авторизация</h3>
+				</div>
+				<!-- /.window-title -->
+				<div class="popup-content">
+					<form action="#">
+					    <label for="#input-login">Введите ваш логин</label>
+					    <input class="popup-input" id="input-login" type="text" required>
+					    <label for="#input-password">Введите ваш пароль</label>
+					    <input class="popup-input" id="input-password" type="password" required>
+					    <input class="popup-btn" type="submit" value="Войти">
+					</form>
+				</div>
+				<!-- /.window-content -->
+			</div>
+			<!-- /.window-body -->
+		</div>
+		<!-- /.window-wrap -->
 
-	
+		<div class="popup-wrap" id="register">
+			<div class="popup-body">
+				<div class="popup-close" id="register-close">&times;</div>
+				<!-- /.window-close -->
+				<div class="popup-title">
+					<h3>Авторизация</h3>
+				</div>
+				<!-- /.window-title -->
+				<div class="popup-content">
+					<form action="#">
+						<label for="#input-name">Введите ваше имя</label>
+					    <input class="popup-input" id="input-name" type="text" required>
+					    <label for="#input-login2">Введите ваш логин</label>
+					    <input class="popup-input" id="input-login2" type="text" required>
+					    <label for="#input-password2">Введите ваш пароль</label>
+					    <input class="popup-input" id="input-password2" type="password" required>
+					    <label for="#input-password3">Повторите ваш пароль</label>
+					    <input class="popup-input" id="input-password3" type="password" required>
+					    <input class="popup-btn" type="submit" value="Зарегистрироваться">
+					</form>
+				</div>
+				<!-- /.window-content -->
+			</div>
+			<!-- /.window-body -->
+		</div>
+		<!-- /.window-wrap -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- 
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+	<script src="js/jquery-1.12.4.min.js"></script>
 	<link rel="stylesheet" href="slick/slick.css">
 	<link rel="stylesheet" href="slick/slick-theme.css">
 	<script src="slick/slick.min.js"></script>
 	<link  href="fotorama/fotorama.css" rel="stylesheet"> 
 	<script src="fotorama/fotorama.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/sidebar-script.js"></script>
 	<script>
 		$('.sale-slider').slick({
 		  autoplay: true,
